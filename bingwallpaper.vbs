@@ -1,3 +1,4 @@
+On error resume next 'comment it for debug
 set FSO=CreateObject ("Scripting.FileSystemObject")
 bingfile = fso.GetSpecialFolder(2): if right(bingfile,1)<>"\" then bingfile=bingfile & "\" : bingfile = bingfile & "bing.jpg"
 
