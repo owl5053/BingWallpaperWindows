@@ -26,8 +26,14 @@ oADOStream.Write oXMLHTTP2.ResponseBody
 oADOStream.SaveToFile bingfile, 2
 
 Set objWshShell = WScript.CreateObject("Wscript.Shell")
-objWshShell.RegWrite "HKEY_CURRENT_USER\Control Panel\Desktop\Wallpaper", bingfile, "REG_SZ"
-objWshShell.Run "%windir%\System32\RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters", 1, False
+'use OS to set wallpaper
+'objWshShell.RegWrite "HKEY_CURRENT_USER\Control Panel\Desktop\Wallpaper", bingfile, "REG_SZ"
+'objWshShell.Run "%windir%\System32\RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters", 1, False
+
+'use irfanview if you want
+objWshShell.Run "c:\Programs\IrfanView\i_view32.exe """ & bingfile & """ /wall=0 /killmesoftly", 1, False 
+
+
 
 Set oXMLHTTP2 = Nothing
 Set oADOStream = Nothing
