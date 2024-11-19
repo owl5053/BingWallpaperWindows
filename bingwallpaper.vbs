@@ -1,7 +1,7 @@
 On error resume next 'comment it for debug
 
 Sub SetWallpaper(FileName)    
-    On Error Resume Next
+    Set oShA = CreateObject("Shell.Application")
     Set oShA = oShA.Windows.Item.document.Application
     If Not IsObject(oSHA) Then _
     Set oShA = GetObject("new:{C08AFD90-F2A1-11D1-8455-00A0C91F3880}").document.Application
