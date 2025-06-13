@@ -25,7 +25,7 @@ Set oXMLHTTP = Nothing
 beg=instr(lcase(xmlfile),"<urlbase>")
 ef=instr(lcase(xmlfile),"</urlbase>")
 lnk=mid(xmlfile,beg+9,ef-beg-9)
-url="http://www.bing.com/"+lnk+"_1920x1080.jpg"
+url="http://www.bing.com/"+lnk+"_UHD.jpg"
 
 Set oXMLHTTP2 = CreateObject("WinHttp.WinHttpRequest.5.1")
 oXMLHTTP2.Open "GET", url, False
